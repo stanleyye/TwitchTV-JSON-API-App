@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
 body {
   background-color: #FF9900;
 }
@@ -8,10 +9,6 @@ body {
   width: 450px;
   border: 1px #FF5A09 solid;
   background: white;
-}
-
-div {
-  text-decoration:none;
 }
 
 .section header {
@@ -25,14 +22,12 @@ div {
   padding-left: 0px;
   height: 50px;
   margin-top: 0;
-  
 }
 
 .section li {
   float: left;
   list-style-type: none;
   border-right: 1px white solid;
-  text-decoration:none;
 }
 
 .section li a {
