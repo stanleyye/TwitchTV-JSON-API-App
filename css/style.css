@@ -37,6 +37,7 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   color: #fff;
+  text-decoration:none;
 }
 
 header ul li:last-child {
