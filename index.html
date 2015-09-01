@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>A Pen by  Stanley</title>
+    
+    
+    
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <html ng-app="Twitch">
+
+<body ng-controller="TwitchController as twitchCtrl">
+  <div class="main" ng-controller="TabController as tab">
+    <div class="section">
+      <header>
+        <ul>
+          <!-- Tabs -->
+          <li ng-class="{ active: tab.isSelected(1)}"><a href ng-click="tab.selectTab(1)">All</a></li>
+          <li ng-class="{ active: tab.isSelected(2)}"><a href ng-click="tab.selectTab(2)">Online</a></li>
+          <li ng-class="{ active: tab.isSelected(3)}"><a href ng-click="tab.selectTab(3)">Offline</a></li>
+        </ul>
+
+      </header>
+    </div>
+    <!-- Search box -->
+    <div id="searchbox">
+
+      <input type="text" name="q" size="30" maxlength="120" ng-model="searchText">
+
+    </div>
+    <!-- Contents of tabs -->
+    <div ng-show="tab.isSelected(1)" ng-repeat="x in twitchCtrl.all | filter:searchText">
+      <a href="{{x.url}}" target="_blank">
+        <div class="profile"><img ng-src="{{x.logo}}" id="userlogo" />
+          <div class="streamtitle">{{x.display_name}}
+            <img ng-src="{{x.img}}" height="17" width="17">
+            <p class="streamtext">{{x.status}}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div ng-show="tab.isSelected(2)" ng-repeat="x in twitchCtrl.online | filter:searchText">
+      <a href="{{x.url}}" target="_blank">
+        <div class="profile"><img ng-src="{{x.logo}}" id="userlogo" />
+          <div class="streamtitle">{{x.display_name}}
+            <img ng-src="{{x.img}}" height="17" width="17">
+            <p class="streamtext">{{x.status}}</p>
+          </div>
+        </div>
+      </a>
+
+
+    </div>
+    <div ng-show="tab.isSelected(3)" ng-repeat="x in twitchCtrl.offline  | filter:searchText">
+      <a href="http://www.twitch.tv/{{x.name}}" target="_blank">
+        <div class="profile"><img ng-src="{{x.logo}}" id="userlogo" />
+          <div class="streamtitle">{{x.display_name}}
+            <img ng-src="{{x.img}}" height="17" width="17">
+
+          </div>
+        </div>
+      </a>
+    </div>
+
+</body>
+
+</html>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

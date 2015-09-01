@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+body {
+  background-color: #FF9900;
+}
+
+.main {
+  margin: 20px auto;
+  width: 450px;
+  border: 1px #FF5A09 solid;
+  background: white;
+}
+
+.section header {
+  height: 46.5px;
+  background-color: #F3843E;
+  position: relative;
+  margin-top: 0;
+}
+
+.section ul {
+  padding-left: 0px;
+  height: 50px;
+  margin-top: 0;
+}
+
+.section li {
+  float: left;
+  list-style-type: none;
+  border-right: 1px white solid;
+}
+
+.section li a {
+  display: block;
+  width: 149px;
+  text-align: center;
+  font: 22px Roboto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+header ul li:last-child {
+  border-right: none;
+}
+
+.active {
+  border-bottom: 2px #00E600 solid;
+}
+
+#searchbox {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #FF5A09;
+  text-align: center;
+}
+
+#searchbox input {
+  height: 25px;
+  border-radius: 15px;
+  font: 15px Roboto;
+  border: 1px solid #919191;
+  padding-left: 15px;
+}
+
+#userlogo {
+  width: 64px;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.streamtitle {
+  display: inline-block;
+  margin-left: 15px;
+  font: 20px Roboto;
+  margin-top: 5px;
+}
+
+.streamtext {
+  font: 12px Roboto;
+  color: #858585;
+}
+
+.profile {
+  margin: 20px;
+}
