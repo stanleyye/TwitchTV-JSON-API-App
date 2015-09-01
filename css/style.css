@@ -84,3 +84,7 @@ header ul li:last-child {
 .profile {
   margin: 20px;
 }
+
+a:hover {
+    text-decoration: none;
+}
